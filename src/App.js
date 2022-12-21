@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import "./App.css";
 import { Category } from "./components/category/Category";
 import { Content } from "./components/content/Content";
@@ -11,6 +11,7 @@ import { Movie } from "./components/movie/Movie";
 import { NotFound } from "./components/notFound/NotFound";
 import { Register } from "./components/register/Register";
 import { Sidebar } from "./components/sidebar/Sidebar";
+import { Cmovie } from "./components/cmovie/Cmovie";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/movies" element={<Content />} />
           <Route path="/" element={<Login />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/cmovie" element={<Cmovie />} />
         </Routes>
         <Footer />
       </Router>

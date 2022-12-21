@@ -51,8 +51,8 @@ export const TopMenu = () => {
                   </NavDropdown.Item>
                 ))}
               </NavDropdown>
-              <Nav.Link as={Link} to={`/category/`}>
-                Más vistas
+              <Nav.Link as={Link} to={"Cmovie"}>
+                Añadir Pelicula
               </Nav.Link>
               <Nav.Link as={Link} to={`/view`}>
                 Mis listas
@@ -60,8 +60,8 @@ export const TopMenu = () => {
               <Nav.Link as={Link} to={`/scores`}>
                 Mis calificados
               </Nav.Link>
-              <Nav.Link as={Link} to={`/account`}>
-                Mi cuenta
+              <Nav.Link as={Link} to={`/Account`}>
+                 Mi cuenta
               </Nav.Link>
               <Nav.Link onClick={logOut}>Cerrar sesión</Nav.Link>
               
