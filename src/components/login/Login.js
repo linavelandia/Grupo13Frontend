@@ -62,7 +62,7 @@ export const Login = () => {
             <Form.Label>Email</Form.Label>
             <Form.Control
               type="email"
-              placeholder="Enter email"
+              placeholder="ingrese su  email"
               name="user"
               onChange={handleChange}
             />
@@ -72,7 +72,7 @@ export const Login = () => {
             <Form.Label>Contraseña</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Registra tu contraseña"
+              placeholder="ingrese su contraseña"
               name="password"
               onChange={handleChange}
             />

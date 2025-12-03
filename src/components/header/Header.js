@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import logo from "../../assets/img/netflix.webp";
+import logo from "../../assets/img/logoe.png";
 import { isAuth } from "../../util/Util";
 import { TopMenu } from "../menu/TopMenu";
 import "./Header.css";
 
 export const Header = () => {
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
   return (
     <div>
       <div className="flex text-center">

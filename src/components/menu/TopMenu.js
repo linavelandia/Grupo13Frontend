@@ -22,7 +22,7 @@ export const TopMenu = () => {
     setCategories(response);
   };
 
-  
+
   const logOut = () => {
     localStorage.clear();
     navigate("/");
@@ -37,34 +37,20 @@ export const TopMenu = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/bienvenido">
                 Inicio
               </Nav.Link>
-              <NavDropdown title="Categorías" id="basic-nav-dropdown">
-                {categories.map((item, idx) => (
-                   <NavDropdown.Item
-                   as={Link}
-                   key={idx}
-                   to={`/category/${item.name}`}
-                 >
-                   {item.name}
-                  </NavDropdown.Item>
-                ))}
-              </NavDropdown>
-              <Nav.Link as={Link} to={"Cmovie"}>
-                Añadir Pelicula
+              <Nav.Link as={Link} to={"/"}>
+                productos
               </Nav.Link>
-              <Nav.Link as={Link} to={`/view`}>
-                Mis listas
+              <Nav.Link as={Link} to={`/descuentos`}>
+                descuentos
               </Nav.Link>
-              <Nav.Link as={Link} to={`/scores`}>
-                Mis calificados
+              <Nav.Link as={Link} to={`/bienvenidos`}>
+                contactos
               </Nav.Link>
-              <Nav.Link as={Link} to={`/Account`}>
-                 Mi cuenta
-              </Nav.Link>
-              <Nav.Link onClick={logOut}>Cerrar sesión</Nav.Link>
-              
+              <Nav.Link onClick={logOut}>LOG OUT</Nav.Link>
+
             </Nav>
           </Navbar.Collapse>
         </Container>

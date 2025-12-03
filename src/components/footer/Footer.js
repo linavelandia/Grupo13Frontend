@@ -9,9 +9,9 @@ class Footer extends React.Component {
 
   render() {
     return (
-        <div className="footer">
-            Todos los derechos reservados @2022 My Movies
-        </div>
+      <div className="footer">
+        Todos los derechos reservados By ELECTRO HOGAR 2025
+      </div>
     );
   }
 }

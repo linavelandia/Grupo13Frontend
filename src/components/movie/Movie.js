@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -77,8 +77,8 @@ export const Movie = () => {
     if (response.status === true) {
       icon = "success";
       confirmButtonText = "OK";
-  }
-  const message = response.message;
+    }
+    const message = response.message;
     showMessage(title, message, icon, confirmButtonText);
   };
 
@@ -108,7 +108,7 @@ export const Movie = () => {
     //debería guardar en una entidad playlist->id cliente, id pelicula, la fecha,state =>1 activo, 2=>oculto
     //mensaje indicanole al usuario que ya se agregó
   };
-  
+
 
   return (
     <div className="movie-container">
@@ -118,7 +118,7 @@ export const Movie = () => {
         height="515"
         src={
           !movie.trailerLink
-          ? "https://www.youtube-nocookie.com/embed/4Lp-Vc4i2QI"
+            ? "https://www.youtube-nocookie.com/embed/4Lp-Vc4i2QI"
             : movie.trailerLink
         }
         title={movie.name}
@@ -133,35 +133,30 @@ export const Movie = () => {
           <div className="staff-list">
             {movie.staffList && movie.staffList.length > 0
               ? movie.staffList.map((staff, idx) => (
-                  <p key={idx}>
-                    {staff.name} {staff.lastName} ({staff.rol})
-                  </p>
-                ))
+                <p key={idx}>
+                  {staff.name} {staff.lastName} ({staff.rol})
+                </p>
+              ))
               : ""}
           </div>
           <div className="category-list">
             {movie.categories && movie.categories.length > 0
               ? movie.categories.map((staff, idx) => (
-                  <p key={idx}>
-                    {staff.name} {staff.lastName} {staff.rol}
-                  </p>
-                ))
+                <p key={idx}>
+                  {staff.name} {staff.lastName} {staff.rol}
+                </p>
+              ))
               : ""}
           </div>
-          <div className="rate">
-            <p>Calificar pelicula</p>
-            <select value={scoreSelected} onChange={sendScore}>
-              <option>Sin calificar</option>
-              {score.map((element, idx) => (
-                <option key={idx}>{element}</option>
-              ))}
-            </select>
-            <button
-              onClick={handleAddList}
-              className={isActive ? "active" : ""}
-            >
-              Agregar a mi lista
-            </button>
+          <div className="mt-4">
+            <Link to="/pedidos" className="mr-5 hover:text-gray-900">
+              <button
+                type="button"
+                className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
+              >
+                COMPRAR
+              </button>
+            </Link>
           </div>
         </div>
       </div>
